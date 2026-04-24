@@ -10,15 +10,18 @@ const gifStages = [
 ]
 
 const noMessages = [
-    "n",//"No",
-    "Are you positive? 🤔",
-    "Pookie please... 🥺",
-    "If you say no, I will be really sad...",
-    "I will be very sad... 😢",
+    "Not Eating Properly","Lack Of Sleep","Overthinking","Stress","Depression",
+    "Bad Miya","Weightloss","Not taking care of yourself",
+    "Not expressing","Ignoring yourMiya"
+    /*"No",//"No",
+    "Let's think 🤔",
+    "HandBag",
+    "Dress",
+    "Vacation",
     "Please??? 💔",
     "Don't do this to me...",
     "Last chance! 😭",
-    "You can't catch me anyway 😜"
+    "You can't catch me anyway 😜"*/
 ]
 
 const yesMessages = [
@@ -84,7 +87,7 @@ function handleYesClick() {
         const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
         showyesMessage(msg)
-        showTeaseMessage(msg)
+        //showTeaseMessage(msg)
         return
     }
     window.location.href = 'yes.html'
@@ -109,20 +112,22 @@ function handleNoClick() {
 
     // Cycle through guilt-trip messages
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
-    noBtn.textContent = noMessages[msgIndex]
-
+    //noBtn.textContent = noMessages[msgIndex]
+    const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
+    showyesMessage(msg)
+    
     // Grow the Yes button bigger each time
-    const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
+  /*  const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
     yesBtn.style.fontSize = `${currentSize * 1.35}px`
-    const padY = Math.min(5 + noClickCount * 2, 40)
-    const padX = Math.min(8 + noClickCount * 5, 80)
-    yesBtn.style.padding = `${padY}px ${padX}px`
+    const padY = Math.min(1 + noClickCount * 2, 10)
+    const padX = Math.min(2 + noClickCount * 5, 20)
+    yesBtn.style.padding = `${padY}px ${padX}px
 
     // Shrink No button to contrast
     if (noClickCount >= 2) {
         const noSize = parseFloat(window.getComputedStyle(noBtn).fontSize)
         noBtn.style.fontSize = `${Math.max(noSize * 0.85, 10)}px`
-    }
+    }*/
 
     // Swap cat GIF through stages
     const gifIndex = Math.min(noClickCount, gifStages.length - 1)
