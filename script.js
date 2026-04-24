@@ -10,7 +10,7 @@ const gifStages = [
 ]
 
 const noMessages = [
-    "No",
+    ""//"No",
     "Are you positive? 🤔",
     "Pookie please... 🥺",
     "If you say no, I will be really sad...",
@@ -21,6 +21,18 @@ const noMessages = [
     "You can't catch me anyway 😜"
 ]
 
+const yesMessages = [
+    "I love How you care about me more than yourself",//"No",
+    "I love it when you're happy because of me",//"Are you positive? 🤔",
+    "I love you when you make all the time for me when you have everything to manage",//"Pookie please... 🥺",
+    "I love you very much",//"If you say no, I will be really sad...",
+    "Your miya is not going to leave alone even for a second",//"I will be very sad... 😢",
+    "You own my heart and my mind infact you own me totally I'm All yours",//"Please??? 💔",
+    "You make me happy and just a thought of you makes me smile",//"Don't do this to me...",
+    "cant even think of a moment without you in it",//"Last chance! 😭",
+    "Need you!! come fast to me ",//"You can't catch me anyway 😜"
+]
+
 const yesTeasePokes = [
     "try saying no first... I bet you want to know what happens 😏",
     "go on, hit no... just once 👀",
@@ -29,7 +41,7 @@ const yesTeasePokes = [
 ]
 
 let yesTeasedCount = 0
-
+let ycount = 0
 let noClickCount = 0
 let runawayEnabled = false
 let musicPlaying = true
@@ -66,9 +78,10 @@ function toggleMusic() {
 }
 
 function handleYesClick() {
-    if (!runawayEnabled) {
+    ycount++;
+    if (!runawayEnabled && ycount<=10) {
         // Tease her to try No first
-        const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
+        const msg = yesTeasePokes[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
         return
@@ -81,7 +94,7 @@ function showTeaseMessage(msg) {
     toast.textContent = msg
     toast.classList.add('show')
     clearTimeout(toast._timer)
-    toast._timer = setTimeout(() => toast.classList.remove('show'), 2500)
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 7500)
 }
 
 function handleNoClick() {
