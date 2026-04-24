@@ -84,7 +84,7 @@ function handleYesClick() {
         const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
         showyesMessage(msg)
-        //showTeaseMessage(msg)
+        showTeaseMessage(msg)
         return
     }
     window.location.href = 'yes.html'
@@ -114,8 +114,8 @@ function handleNoClick() {
     // Grow the Yes button bigger each time
     const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
     yesBtn.style.fontSize = `${currentSize * 1.35}px`
-    const padY = Math.min(18 + noClickCount * 5, 40)
-    const padX = Math.min(45 + noClickCount * 10, 80)
+    const padY = Math.min(18 + noClickCount * 2, 40)
+    const padX = Math.min(45 + noClickCount * 5, 80)
     yesBtn.style.padding = `${padY}px ${padX}px`
 
     // Shrink No button to contrast
