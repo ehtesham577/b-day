@@ -10,7 +10,7 @@ const gifStages = [
 ]
 
 const noMessages = [
-    ""//"No",
+    "",//"No",
     "Are you positive? 🤔",
     "Pookie please... 🥺",
     "If you say no, I will be really sad...",
@@ -81,7 +81,7 @@ function handleYesClick() {
     ycount++;
     if (!runawayEnabled && ycount<=10) {
         // Tease her to try No first
-        const msg = yesTeasePokes[Math.min(yesTeasedCount, yesMessages.length - 1)]
+        const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
         return
