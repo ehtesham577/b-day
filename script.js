@@ -10,7 +10,7 @@ const gifStages = [
 ]
 
 const noMessages = [
-    "",//"No",
+    "n",//"No",
     "Are you positive? 🤔",
     "Pookie please... 🥺",
     "If you say no, I will be really sad...",
@@ -30,7 +30,7 @@ const yesMessages = [
     "You own my heart and my mind infact you own me totally I'm All yours",//"Please??? 💔",
     "You make me happy and just a thought of you makes me smile",//"Don't do this to me...",
     "cant even think of a moment without you in it",//"Last chance! 😭",
-    "Need you!! come fast to me ",//"You can't catch me anyway 😜"
+    "Need you!! come fast to me "//"You can't catch me anyway 😜"
 ]
 
 const yesTeasePokes = [
@@ -79,16 +79,23 @@ function toggleMusic() {
 
 function handleYesClick() {
     ycount++;
-    if (!runawayEnabled && ycount<=10) {
+    if (!runawayEnabled) {
         // Tease her to try No first
         const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
-        showTeaseMessage(msg)
+        showyesMessage(msgs)
+        //showTeaseMessage(msg)
         return
     }
     window.location.href = 'yes.html'
 }
-
+function showyesMessage(msg) {
+    let toast = document.getElementById('tease-toast')
+    toast.textContent = msg
+    toast.classList.add('show')
+    clearTimeout(toast._timer)
+    toast._timer = setTimeout(() => toast.classList.remove('show'), 7500)
+}
 function showTeaseMessage(msg) {
     let toast = document.getElementById('tease-toast')
     toast.textContent = msg
