@@ -83,7 +83,7 @@ function toggleMusic() {
 
 function handleYesClick() {
     ycount++;
-    if (!runawayEnabled && yesTeasedCount<=10 && noClickCount<=10) {
+    if (yesTeasedCount<=10 && noClickCount<=10) {
         // Tease her to try No first
         const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
@@ -92,17 +92,19 @@ function handleYesClick() {
         return
     }
     
-    if(yesTeasedCount==10 && noClickCount==10)
+    if(yesTeasedCount>=10 && noClickCount>=10)
     { 
         window.location.href = 'yes.html'
     }
-    if(yesTeasedCount!=10 && noClickCount==10)
+    if(yesTeasedCount!=10 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
+        return
     }
-    if(yesTeasedCount==10 && noClickCount!=10)
+    if(yesTeasedCount>=10 && noClickCount!=10)
     {
         showyesMessage("Let's see myConcerns")
+        return
     }
 }
 function showyesMessage(msg) {
