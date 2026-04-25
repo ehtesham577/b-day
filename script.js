@@ -10,29 +10,29 @@ const gifStages = [
 ]
 
 const noMessages = [
-    "Not Eating Properly",
-    "Lack Of Sleep",
-    "Overthinking",
-    "Lots of Stress",
-    "Depression",
-    "Not expressing",
-    "Very Bad Miya",
-    "Weightloss",
-    "Not taking care of yourself",
-    "Ignoring yourMiya"
+    "Not Eating Properly 😐",
+    "Lack Of Sleep 🙄",
+    "Overthinking 😑",
+    "Lots of Stress 🥲",
+    "Depression 😐",
+    "Not expressing 😒",
+    "Very Bad Miya🤐",
+    "Weightloss 😑",
+    "Not taking care of yourself 😕",
+    "Ignoring yourMiya☹️"
 ]
 
 const yesMessages = [
-    "I love How you care about me more than yourself",//"No",
-    "I love it when you're happy because of me",//"Are you positive? 🤔",
-    "I love you when you make all the time for me even when you have everything to manage",//"Pookie please... 🥺",
-    "I dont love how you hide your issues from me and act like nothing happened. \nAm I that bad??",//"If you say no, I will be really sad...",
-    "Do you think your alone?? \nYour miya is not going to leave alone even for a second ",//"I will be very sad... 😢",
-    "You should know that-- You own my heart and my mind infact you own me totally I'm All yours",//"Please??? 💔",
-    "You make me happy and just a thought of you makes me smile",//"Don't do this to me...",
-    "You think I'm ignoring you? \nCan't even think of a moment without you in it",//"Last chance! 😭",
-    "Need you!! \ncome fast to me ",
-    "You're my Everything forever"
+    "I love How you care about me more than yourself ☺️",//"No",
+    "I love it when you're happy because of me 😊",//"Are you positive? 🤔",
+    "I love you when you make all the time for me even when you have everything to manage♥️",//"Pookie please... 🥺",
+    "I dont love how you hide your issues from me and act like nothing happened. \nAm I that bad??🤔",//"If you say no, I will be really sad...",
+    "Do you think your alone?? \nYour miya is not going to leave alone even for a second ☺️",//"I will be very sad... 😢",
+    "You should know that-- You own my heart and my mind infact you own me totally I'm All yours ♥️",//"Please??? 💔",
+    "You make me happy and just a thought of you makes me smile☺️",//"Don't do this to me...",
+    "You think I'm ignoring you? \nCan't even think of a moment without you in it 😘",//"Last chance! 😭",
+    "Need you!! \ncome fast to me 🥺",
+    "You're my Everything forever ♥️"
 ]
 
 const yesTeasePokes = [
