@@ -96,12 +96,12 @@ function handleYesClick() {
     { 
         window.location.href = 'yes.html'
     }
-    if(ycount!=10 && noClickCount>=10)
+    if(ycount<=10 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
         return
     }
-    if(ycount>=10 && noClickCount!=10)
+    if(ycount>=10 && noClickCount<=10)
     {
         showyesMessage("Let's see myConcerns")
         return
@@ -153,11 +153,11 @@ function handleNoClick() {
         enableRunaway()
         runawayEnabled = true
     }
-    if(ycount!=10 && noClickCount==10)
+    if(ycount<=10 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
     }
-    if(ycount==10 && noClickCount!=10)
+    if(ycount>=10 && noClickCount<=10)
     {
         showyesMessage("Let's see myConcerns")
     }
