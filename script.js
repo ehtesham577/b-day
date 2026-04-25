@@ -32,8 +32,9 @@ const yesMessages = [
     "Your miya is not going to leave alone even for a second",//"I will be very sad... 😢",
     "You own my heart and my mind infact you own me totally I'm All yours",//"Please??? 💔",
     "You make me happy and just a thought of you makes me smile",//"Don't do this to me...",
-    "cant even think of a moment without you in it",//"Last chance! 😭",
-    "Need you!! come fast to me "//"You can't catch me anyway 😜"
+    "Can't even think of a moment without you in it",//"Last chance! 😭",
+    "Need you!! come fast to me ",
+    "You're my Everything forever"
 ]
 
 const yesTeasePokes = [
@@ -97,11 +98,11 @@ function handleYesClick() {
     }
     if(yesTeasedCount!=10 && noClickCount==10)
     {
-        showyesMessage("Check My Confessions")
+        showyesMessage("Let's see myConfessions")
     }
     if(yesTeasedCount==10 && noClickCount!=10)
     {
-        showyesMessage("Check My Concerns")
+        showyesMessage("Let's see myConcerns")
     }
 }
 function showyesMessage(msg) {
@@ -149,6 +150,14 @@ function handleNoClick() {
     if (noClickCount >= 5 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
+    }
+    if(yesTeasedCount!=10 && noClickCount==10)
+    {
+        showyesMessage("Let's see myConfessions")
+    }
+    if(yesTeasedCount==10 && noClickCount!=10)
+    {
+        showyesMessage("Let's see myConcerns")
     }
 }
 
