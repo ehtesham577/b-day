@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+  font-size: 80%; /* Everything using rem will shrink by 20% */
+}
 
 body {
     background-color: #FFE4E8;
