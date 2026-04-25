@@ -91,11 +91,6 @@ function handleYesClick() {
         //showTeaseMessage(msg)
         return
     }
-    
-    else if(ycount>=10 && noClickCount>=10)
-    { 
-        window.location.href = 'yes.html'
-    }
     else if(ycount<=9 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
@@ -105,6 +100,10 @@ function handleYesClick() {
     {
         showyesMessage("Let's see myConcerns")
         return
+    }
+    if(ycount>=10 && noClickCount>=10)
+    { 
+        window.location.href = 'yes.html'
     }
 }
 function showyesMessage(msg) {
@@ -142,7 +141,7 @@ function handleNoClick() {
         showyesMessage("Let's see myConcerns")
         return
     }
-    else if(ycount>=10 && noClickCount>=10)
+    if(ycount>=10 && noClickCount>=10)
     { 
         window.location.href = 'yes.html'
     }
