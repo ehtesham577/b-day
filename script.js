@@ -83,7 +83,7 @@ function toggleMusic() {
 
 function handleYesClick() {
     ycount++;
-    if (ycount<=10 && noClickCount<=10) {
+    if (ycount<=10) {
         // Tease her to try No first
         const msg = yesMessages[Math.min(yesTeasedCount, yesMessages.length - 1)]
         yesTeasedCount++
@@ -124,7 +124,7 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
     noClickCount++
-     if (ycount<=10 && noClickCount<=10) {
+     if (noClickCount<=10) {
     // Cycle through guilt-trip messages
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
     //noBtn.textContent = noMessages[msgIndex]
