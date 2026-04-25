@@ -130,6 +130,7 @@ function handleNoClick() {
     //noBtn.textContent = noMessages[msgIndex]
     const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
     showyesMessage(msg)
+         return
      }
     // Grow the Yes button bigger each time
   /*  const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
