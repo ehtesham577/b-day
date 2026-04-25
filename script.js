@@ -92,16 +92,16 @@ function handleYesClick() {
         return
     }
     
-    if(ycount>=10 && noClickCount>=10)
+    else if(ycount>=10 && noClickCount>=10)
     { 
         window.location.href = 'yes.html'
     }
-    if(ycount<=9 && noClickCount>=10)
+    else if(ycount<=9 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
         return
     }
-    if(ycount>=10 && noClickCount<=9)
+    else if(ycount>=10 && noClickCount<=9)
     {
         showyesMessage("Let's see myConcerns")
         return
@@ -130,8 +130,23 @@ function handleNoClick() {
     //noBtn.textContent = noMessages[msgIndex]
     const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
     showyesMessage(msg)
-         return
+    return
      }
+    else if(ycount<=9 && noClickCount>=10)
+    {
+        showyesMessage("Let's see myConfessions")
+        return
+    }
+    else if(ycount>=10 && noClickCount<=9)
+    {
+        showyesMessage("Let's see myConcerns")
+        return
+    }
+    else if(ycount>=10 && noClickCount>=10)
+    { 
+        window.location.href = 'yes.html'
+    }
+
     // Grow the Yes button bigger each time
   /*  const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
     yesBtn.style.fontSize = `${currentSize * 1.35}px`
@@ -154,21 +169,7 @@ function handleNoClick() {
         enableRunaway()
         runawayEnabled = true
     }*/
-    if(ycount<=9 && noClickCount>=10)
-    {
-        showyesMessage("Let's see myConfessions")
-        return
-    }
-    if(ycount>=10 && noClickCount<=9)
-    {
-        showyesMessage("Let's see myConcerns")
-        return
-    }
-    if(ycount>=10 && noClickCount>=10)
-    { 
-        window.location.href = 'yes.html'
-    }
-}
+   }
 
 function swapGif(src) {
     catGif.style.opacity = '0'
