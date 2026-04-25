@@ -96,12 +96,12 @@ function handleYesClick() {
     { 
         window.location.href = 'yes.html'
     }
-    if(ycount<=10 && noClickCount>=10)
+    if(ycount<=9 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
         return
     }
-    if(ycount>=10 && noClickCount<=10)
+    if(ycount>=10 && noClickCount<=9)
     {
         showyesMessage("Let's see myConcerns")
         return
@@ -149,17 +149,23 @@ function handleNoClick() {
     swapGif(gifStages[gifIndex])
 
     // Runaway starts at click 5
-    if (noClickCount >= 5 && !runawayEnabled) {
+   /* if (noClickCount >= 5 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
-    }
-    if(ycount<=10 && noClickCount>=10)
+    }*/
+    if(ycount<=9 && noClickCount>=10)
     {
         showyesMessage("Let's see myConfessions")
+        return
     }
-    if(ycount>=10 && noClickCount<=10)
+    if(ycount>=10 && noClickCount<=9)
     {
         showyesMessage("Let's see myConcerns")
+        return
+    }
+    if(ycount>=10 && noClickCount>=10)
+    { 
+        window.location.href = 'yes.html'
     }
 }
 
