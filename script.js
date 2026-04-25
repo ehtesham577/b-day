@@ -124,13 +124,13 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
     noClickCount++
-
+     if (ycount<=10 && noClickCount<=10) {
     // Cycle through guilt-trip messages
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
     //noBtn.textContent = noMessages[msgIndex]
     const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
     showyesMessage(msg)
-    
+     }
     // Grow the Yes button bigger each time
   /*  const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize)
     yesBtn.style.fontSize = `${currentSize * 1.35}px`
