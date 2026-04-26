@@ -150,6 +150,7 @@ h1 {
     transform: translateY(6px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     min-height: 1.5rem;
+    white-space: pre-line;
 }
 
 #tease-toast.show {
