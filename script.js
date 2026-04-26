@@ -26,11 +26,11 @@ const yesMessages = [
     "I love How you care about me more than yourself ☺️",
     "I love it when you're happy because of me 😊",
     "I love you when you make all the time for me even when you have everything to manage♥️",
-    "I dont love how you hide your issues from me and act like nothing happened. \nAm I that bad??🤔",
-    "Do you think you're alone?? /n Your miya is not going to leave alone even for a second ☺️",
+    "I dont love how you hide your issues from me and act like nothing happened. \n Am I that bad??🤔",
+    "Do you think you're alone?? \n Your miya is not going to leave alone even for a second ☺️",
     "You should know that-- You own my heart and my mind infact you own me totally I'm All yours ♥️",
     "You make me happy and just a thought of you makes me smile☺️",
-    "You think I'm ignoring you? \nCan't even think of a moment without you in it 😘",
+    "You think I'm ignoring you? \n Can't even think of a moment without you in it 😘",
     "Need you!! \n come fast to me 🥺",
     "You're my Everything forever ♥️"
 ]
@@ -91,12 +91,12 @@ function handleYesClick() {
     }
     else if(ycount<=9 && noClickCount>=10)
     {
-        showyesMessage("I'm Worried about you!!  Let's see myConfessions!")
+        showyesMessage("I'm Worried about you!! \n Let's see myConfessions!")
         return
     }
     else if(ycount>=10 && noClickCount<=9)
     {
-        showyesMessage("Very much in Love with you!!  Let's see myConcerns!")
+        showyesMessage("Very much in Love with you!!\n Let's see myConcerns!")
         return
     }
     if(ycount>=10 && noClickCount>=10)
@@ -113,7 +113,8 @@ function showyesMessage(msg) {
 }
 function showTeaseMessage(msg) {
     let toast = document.getElementById('tease-toast')
-    toast.textContent = msg
+    toast.innerHTML = msg.split('\n').join('<br>')
+    //toast.textContent = msg
     toast.classList.add('show')
     clearTimeout(toast._timer)
     toast._timer = setTimeout(() => toast.classList.remove('show'), 7500)
@@ -126,17 +127,18 @@ function handleNoClick() {
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
     //noBtn.textContent = noMessages[msgIndex]
     const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
-    showyesMessage(msg)
+    showTeaseMessage(msg)
+    //showyesMessage(msg)
     return
      }
     else if(ycount<=9 && noClickCount>=10)
     {
-        showyesMessage("I'm Worried about you!!   Let's see myConfessions!")
+        showyesMessage("I'm Worried about you!! \n Let's see myConfessions!")
         return
     }
     else if(ycount>=10 && noClickCount<=9)
     {
-        showyesMessage("Very much in Love with you!!  Let's see myConcerns!")
+        showyesMessage("Very much in Love with you!!  \n Let's see myConcerns!")
         return
     }
     if(ycount>=10 && noClickCount>=10)
