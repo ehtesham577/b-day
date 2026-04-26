@@ -113,8 +113,8 @@ function showyesMessage(msg) {
 }
 function showTeaseMessage(msg) {
     let toast = document.getElementById('tease-toast')
-    toast.innerHTML = msg.split('\n').join('<br>')
-    //toast.textContent = msg
+    //toast.innerHTML = msg.split('\n').join('<br>')
+    toast.textContent = msg
     toast.classList.add('show')
     clearTimeout(toast._timer)
     toast._timer = setTimeout(() => toast.classList.remove('show'), 7500)
@@ -133,8 +133,8 @@ function handleNoClick() {
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
     //noBtn.textContent = noMessages[msgIndex]
     const msg = noMessages[Math.min(msgIndex, noMessages.length - 1)]
-    showTeaseMessage(msg)
-    //showyesMessage(msg)
+    //showTeaseMessage(msg)
+    showyesMessage(msg)
     return
      }
     else if(ycount<=9 && noClickCount>=10)
