@@ -31,7 +31,7 @@ const yesMessages = [
     "You should know that-- You own my heart and my mind infact you own me totally I'm All yours ♥️",//"Please??? 💔",
     "You make me happy and just a thought of you makes me smile☺️",//"Don't do this to me...",
     "You think I'm ignoring you? \nCan't even think of a moment without you in it 😘",//"Last chance! 😭",
-    "Need you!! \n come fast to me 🥺",
+    "Need you!!" + "\n" +  "come fast to me 🥺",
     "You're my Everything forever ♥️"
 ]
 
