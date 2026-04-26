@@ -23,7 +23,7 @@ const noMessages = [
 ]
 
 const yesMessages = [
-   "I love how you care about me more than yourself ☺️",
+    "I love how you care about me more than yourself ☺️",
     "I love it when you're happy because of me 😊",
     "I love you when you make all the time for me even when you have everything to manage ♥️",
     "I dont love how you hide your issues from me and act like nothing happened.\nAm I that bad?? 🤔",
