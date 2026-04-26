@@ -27,7 +27,7 @@ const yesMessages = [
     "I love it when you're happy because of me 😊",//"Are you positive? 🤔",
     "I love you when you make all the time for me even when you have everything to manage♥️",//"Pookie please... 🥺",
     "I dont love how you hide your issues from me and act like nothing happened. \nAm I that bad??🤔",//"If you say no, I will be really sad...",
-    "Do you think your alone?? \nYour miya is not going to leave alone even for a second ☺️",//"I will be very sad... 😢",
+    "Do you think you're alone?? \nYour miya is not going to leave alone even for a second ☺️",//"I will be very sad... 😢",
     "You should know that-- You own my heart and my mind infact you own me totally I'm All yours ♥️",//"Please??? 💔",
     "You make me happy and just a thought of you makes me smile☺️",//"Don't do this to me...",
     "You think I'm ignoring you? \nCan't even think of a moment without you in it 😘",//"Last chance! 😭",
@@ -91,12 +91,12 @@ function handleYesClick() {
     }
     else if(ycount<=9 && noClickCount>=10)
     {
-        showyesMessage("Let's see myConfessions")
+        showyesMessage("I'm Worried about you!!<br>Let's see myConfessions!")
         return
     }
     else if(ycount>=10 && noClickCount<=9)
     {
-        showyesMessage("Let's see myConcerns")
+        showyesMessage("Very much in Love with you!!<br>Let's see myConcerns!")
         return
     }
     if(ycount>=10 && noClickCount>=10)
@@ -131,12 +131,12 @@ function handleNoClick() {
      }
     else if(ycount<=9 && noClickCount>=10)
     {
-        showyesMessage("Let's see myConfessions")
+        showyesMessage("I'm Worried about you!!<br>Let's see myConfessions!")
         return
     }
     else if(ycount>=10 && noClickCount<=9)
     {
-        showyesMessage("Let's see myConcerns")
+        showyesMessage("Very much in Love with you!!<br>Let's see myConcerns!")
         return
     }
     if(ycount>=10 && noClickCount>=10)
