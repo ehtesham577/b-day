@@ -122,6 +122,12 @@ function showTeaseMessage(msg) {
 
 function handleNoClick() {
     noClickCount++
+
+     if (noClickCount >= 10 && !runawayEnabled) {
+        enableRunaway()
+        runawayEnabled = true
+    }
+    
      if (noClickCount<=10) {
     // Cycle through guilt-trip messages
     const msgIndex = Math.min(noClickCount, noMessages.length - 1)
@@ -164,10 +170,7 @@ function handleNoClick() {
     swapGif(gifStages[gifIndex])
 
     // Runaway starts at click 5
-    if (noClickCount >= 10 && !runawayEnabled) {
-        enableRunaway()
-        runawayEnabled = true
-    }
+   
    }
 
 function swapGif(src) {
