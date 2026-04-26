@@ -19,7 +19,7 @@ const noMessages = [
     "Very Bad Miya🤐",
     "Weightloss 😑",
     "Not taking care of yourself 😕",
-    "Ignoring yourMiya☹️"
+    "Ignoring yourMiya☹️ "
 ]
 
 const yesMessages = [
@@ -31,7 +31,7 @@ const yesMessages = [
     "You should know that-- You own my heart and my mind infact you own me totally I'm All yours ♥️",
     "You make me happy and just a thought of you makes me smile☺️",
     "You think I'm ignoring you? \n Can't even think of a moment without you in it 😘",
-    "Need you!! \n come fast to me 🥺",
+    "Miss you a lot !! Need you!! \n come fast to me 🥺",
     "You're my Everything forever ♥️"
 ]
 
@@ -123,10 +123,10 @@ function showTeaseMessage(msg) {
 function handleNoClick() {
     noClickCount++
 
-     if (noClickCount >= 10 && !runawayEnabled) {
+     /*if (noClickCount >= 10 && !runawayEnabled) {
         enableRunaway()
         runawayEnabled = true
-    }
+    }*/
     
      if (noClickCount<=10) {
     // Cycle through guilt-trip messages
